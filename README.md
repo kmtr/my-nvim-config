@@ -12,6 +12,13 @@ note: nvim 0.5 is not stable (2021-04)
 % brew install neovim --HEAD
 ```
 
+#### Linux
+
+```
+% curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
+% chmod u+x nvim.appimage
+```
+
 ### Install junegunn/vim-plug
 
 ref: https://github.com/junegunn/vim-plug
@@ -78,3 +85,4 @@ Plugins are downloaded to this directory.
 ### ref
 
 https://mattn.kaoriya.net/software/vim/20191231001537.htm
+
