@@ -54,7 +54,8 @@ end
 local servers = {
     "gopls",
     "rust_analyzer",
-    "clojure_lsp"
+    "clojure_lsp",
+    "pyls",
 }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup { on_attach = on_attach }
