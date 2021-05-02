@@ -86,3 +86,23 @@ Plugins are downloaded to this directory.
 
 https://mattn.kaoriya.net/software/vim/20191231001537.htm
 
+# LSP
+
+## Install
+
+### gopls
+
+https://github.com/golang/tools/blob/master/gopls/README.md#installation
+
+### rust-analyzer
+
+https://rust-analyzer.github.io/manual.html#installation
+
+### clojure-lsp
+
+https://clojure-lsp.github.io/clojure-lsp/installation/
+
+### pyls
+
+https://github.com/palantir/python-language-server#installation
+
