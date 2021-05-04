@@ -5,7 +5,7 @@ ino <C-s> <Esc>:w<CR>
 
 nn <silent> <Esc><Esc> :nohlsearch<CR><Esc>
 
-ino <C-s> <Esc>:w<CR>i
+ino <C-s> <Esc>:w<CR>a
 nn <C-s> :w<CR>
 
 vmap <Leader>y "+y
