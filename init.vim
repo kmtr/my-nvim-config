@@ -40,6 +40,7 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'udalov/kotlin-vim'
 
 call plug#end()
 
