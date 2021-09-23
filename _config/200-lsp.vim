@@ -55,7 +55,7 @@ local servers = {
     "gopls",
     "rust_analyzer",
     "clojure_lsp",
-    "pyls",
+    "pylsp",
     "kotlin_language_server",
 }
 for _, lsp in ipairs(servers) do
