@@ -51,6 +51,7 @@ local on_attach = function(client, bufnr)
 	end
 end
 
+-- https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md
 local servers = {
     "gopls",
     "rust_analyzer",
