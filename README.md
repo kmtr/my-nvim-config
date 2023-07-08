@@ -1,35 +1,22 @@
 # nvim configurations
 
+## Plugins
+
+This configuration uses [lazy.nvim](https://github.com/folke/lazy.nvim).
+The command `:Lazy` shows the console.
+You quit the console with `q`.
+If you want to update the installed plugins, run `:Lazy update`.
 ## Setup
 
-### Install nvim 0.5
+### Install nvim
 
-note: nvim 0.5 is not stable (2021-04)
-
-#### Mac
-
-```
-% brew install neovim --HEAD
-```
-
-#### Linux
-
-```
-% curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
-% chmod u+x nvim.appimage
-```
-
-### Install junegunn/vim-plug
-
-ref: https://github.com/junegunn/vim-plug
+https://neovim.io/
 
 ### Install Configurations
 
 ```zsh
 % ln -s $(pwd)/my-nvim-config $HOME/.config/nvim
 ```
-
-And run `:PlugInstall` .
 
 ## Architecture
 
@@ -39,15 +26,13 @@ And run `:PlugInstall` .
 
 You are reading now.
 
-#### init.vim
+#### init.lua
 
 It is the entrypoint of nvim configuration.
 You should write global settings and plugins list except key-mappings.
-Other configurations are in `_config/`
+Other configurations are in `lua/`
 
-The last line is for loading any other configurations from `_config/` .
-
-#### _config/
+#### lua/
 
 It's a directory for configurations about key-mappings and plugin's configurations.
 The config files must follow a naming convention in order to be loaded with nvim.
@@ -65,11 +50,9 @@ Each `number` has loose rules.
 |2xx     | LSP |
 |3xx     | Filetype |
 
-#### plugged/
+#### lazy-lock.json
 
-Plugins are downloaded to this directory.
-
-**DO NOT TOUCH with your hand!**
+It is made by `lazy.nvim` but in this repo it is in `gitignore`.
 
 ## Key mappings
 
@@ -77,37 +60,17 @@ Plugins are downloaded to this directory.
 |-----|--------|
 | `<C-a>` | `<Home>` |
 | `<C-e>` | `<End>` |
-| `<Leader>y` | Copy to the clipboard |
-| `<Leader>d` | Cut to the clipboard |
+| `<Leader>y` | (Visual)Copy to the clipboard |
+| `<Leader>d` | (Visual)Cut to the clipboard |
 | `<Leader>p` | Paste from the clipboard |
-| `<C-n>` | NERDTreeToggle |
-
-### ref
-
-https://mattn.kaoriya.net/software/vim/20191231001537.htm
+| `<C-n>` | NvimTreeOpen |
+| `<Leader>n>` | NvimTreeFocus |
 
 # LSP
 
 ## Install
 
-### gopls
-
-https://github.com/golang/tools/blob/master/gopls/README.md#installation
-
 ### rust-analyzer
 
 https://rust-analyzer.github.io/manual.html#installation
-
-### clojure-lsp
-
-https://clojure-lsp.github.io/clojure-lsp/installation/
-
-### pyls
-
-https://github.com/palantir/python-language-server#installation
-
-
-## Packer
-
-https://github.com/wbthomason/packer.nvim
 

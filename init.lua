@@ -1,11 +1,8 @@
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-require("nvim-tree").setup()
+require("000-plugins")
+require("001-opts")
+require("002-keys")
 
-require("101-plugins")
-require("102-opts")
-require("103-keys")
-require("104-nvimtree")
+require("101-nvimtree")
 
 require("200-lsp")
 require("201-treesitter")
