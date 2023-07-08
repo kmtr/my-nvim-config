@@ -106,3 +106,8 @@ https://clojure-lsp.github.io/clojure-lsp/installation/
 
 https://github.com/palantir/python-language-server#installation
 
+
+## Packer
+
+https://github.com/wbthomason/packer.nvim
+
