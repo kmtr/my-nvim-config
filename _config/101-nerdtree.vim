@@ -5,7 +5,7 @@ endif
 let g:NERDTreeDirArrowExpandable = "+"
 let g:NERDTreeDirArrowCollapsible = "~"
 
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeFocus<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
