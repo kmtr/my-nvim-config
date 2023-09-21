@@ -9,5 +9,6 @@ require("201-treesitter")
 require("202-dap")
 
 require("301-rust")
+require("302-go")
 
 vim.opt.termguicolors = true

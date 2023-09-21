@@ -68,9 +68,11 @@ It is made by `lazy.nvim` but in this repo it is in `gitignore`.
 
 # LSP
 
-## Install
-
-### rust-analyzer
+## rust-analyzer
 
 https://rust-analyzer.github.io/manual.html#installation
+
+## gopls
+
+https://github.com/golang/tools/blob/master/gopls/README.md#installation
 
