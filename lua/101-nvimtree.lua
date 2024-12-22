@@ -2,6 +2,13 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 require("nvim-tree").setup()
 
-vim.keymap.set({"n"}, "<C-n>", ":NvimTreeOpen<CR>")
-vim.keymap.set({"n"}, "<C-S-n>", ":NvimTreeClose<CR>")
-vim.keymap.set({"n"}, "<Leader>n", ":NvimTreeFocus<CR>")
+function toggle_nvimtree()
+	if vim.fn.bufname():match 'NvimTree_' then
+		vim.cmd.wincmd 'p'
+	else
+        vim.cmd('NvimTreeFocus')
+	end
+end
+
+vim.keymap.set({"n"}, "<C-S-n>", ":NvimTreeToggle<CR>")
+vim.keymap.set({"n"}, "<C-n>", "<cmd>:lua toggle_nvimtree()<CR>")
