@@ -13,11 +13,11 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
-    "easymotion/vim-easymotion",
     "EdenEast/nightfox.nvim",
     "danilamihailov/beacon.nvim",
 
     "nvim-tree/nvim-tree.lua",
+    "hadronized/hop.nvim",
 
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
