@@ -1,5 +1,4 @@
 vim.cmd([[colorscheme nightfox]])
-vim.cmd([[highlight CursorLine gui=underline guifg=NONE guibg=NONE]])
 
 vim.opt.ambiwidth = "single"
 vim.opt.autoindent = true
