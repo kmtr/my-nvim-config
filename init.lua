@@ -12,5 +12,6 @@ require("202-dap")
 require("301-rust")
 require("302-go")
 require("303-julia")
+require("304-nix")
 
 vim.opt.termguicolors = true

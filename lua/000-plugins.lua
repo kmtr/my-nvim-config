@@ -35,4 +35,7 @@ require("lazy").setup({
     "nvim-treesitter/nvim-treesitter",
 
     "mfussenegger/nvim-dap",
+
+    "sbdchd/neoformat",
+    "LnL7/vim-nix",
 })
