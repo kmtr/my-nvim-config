@@ -19,6 +19,11 @@ require("lazy").setup({
     "nvim-tree/nvim-tree.lua",
     "hadronized/hop.nvim",
 
+    {
+    "nvim-telescope/telescope.nvim", tag = '0.1.8',
+        dependencies = { 'nvim-lua/plenary.nvim' }
+    },
+
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
 

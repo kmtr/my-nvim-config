@@ -4,6 +4,7 @@ require("002-keys")
 
 require("101-nvimtree")
 require("102-hop")
+require("103-telescope")
 
 require("200-lsp")
 require("201-treesitter")
