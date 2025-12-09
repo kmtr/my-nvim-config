@@ -18,6 +18,14 @@ https://neovim.io/
 % ln -s $(pwd)/my-nvim-config $HOME/.config/nvim
 ```
 
+### Daily maintenance
+
+```zsh
+% nvim
+:Lazy update
+:TSUpdate
+```
+
 ## Architecture
 
 ### Codemap
