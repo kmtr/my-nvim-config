@@ -1,12 +1,7 @@
 -- :MasonInstall rust-analyzer codelldb
 -- :MasonUpdate
-local lspconfig = require'lspconfig'
-
-local on_attach = function(client)
-end
-
-lspconfig.rust_analyzer.setup({
-    on_attach = on_attach,
+vim.lsp.enable('rust_analyzer')
+vim.lsp.config('rust_analyzer', {
     settings = {
         ["rust-analyzer"] = {
             checkOnSave = {

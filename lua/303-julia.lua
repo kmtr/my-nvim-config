@@ -1,2 +1,2 @@
-require'lspconfig'.julials.setup{}
+vim.lsp.config('julials', {})
 
