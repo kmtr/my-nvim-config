@@ -17,8 +17,15 @@ require("lazy").setup({
     "danilamihailov/beacon.nvim",
 
     "nvim-tree/nvim-tree.lua",
-    "hadronized/hop.nvim",
-
+    {
+        "folke/flash.nvim",
+        event = "VeryLazy",
+        ---@type Flash.Config
+        opts = {},
+        keys = {
+            { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+	},
+    },
     {
     "nvim-telescope/telescope.nvim", tag = '0.1.8',
         dependencies = { 'nvim-lua/plenary.nvim' }
@@ -36,8 +43,6 @@ require("lazy").setup({
     "hrsh7th/cmp-path",
     "hrsh7th/cmp-buffer",
     "hrsh7th/vim-vsnip",
-
-    "nvim-treesitter/nvim-treesitter",
 
     "mfussenegger/nvim-dap",
 
