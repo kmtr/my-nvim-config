@@ -22,9 +22,6 @@ require("lazy").setup({
         event = "VeryLazy",
         ---@type Flash.Config
         opts = {},
-        keys = {
-            { "<Leader><Leader>w", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
-	},
     },
     {
     "nvim-telescope/telescope.nvim", tag = '0.1.8',
