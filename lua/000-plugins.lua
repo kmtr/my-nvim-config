@@ -23,7 +23,7 @@ require("lazy").setup({
         ---@type Flash.Config
         opts = {},
         keys = {
-            { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+            { "<Leader><Leader>w", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
 	},
     },
     {
