@@ -23,7 +23,6 @@ https://neovim.io/
 ```zsh
 % nvim
 :Lazy update
-:TSUpdate
 ```
 
 ## Architecture
