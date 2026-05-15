@@ -1,5 +1,17 @@
 require("mason").setup()
 
+vim.lsp.config("ts_ls", {
+    on_attach = function(client)
+        client.server_capabilities.documentFormattingProvider = false
+        client.server_capabilities.documentRangeFormattingProvider = false
+    end,
+})
+
+require("mason-lspconfig").setup({
+    -- mason-lspconfig uses the lspconfig server name; this installs typescript-language-server.
+    ensure_installed = { "ts_ls" },
+})
+
 --Set completeopt to have a better completion experience
 -- :help completeopt
 -- menuone: popup even when there's only one match
@@ -9,7 +21,7 @@ require("mason").setup()
 -- updatetime: set updatetime for CursorHold
 vim.opt.completeopt = {'menuone', 'noselect', 'noinsert'}
 vim.opt.shortmess = vim.opt.shortmess + { c = true}
-vim.api.nvim_set_option('updatetime', 300) 
+vim.opt.updatetime = 300
 
 -- Fixed column for diagnostics to appear
 -- Show autodiagnostic popup on cursor hover_range
@@ -20,23 +32,16 @@ set signcolumn=yes
 autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 ]])
 
--- LSP Diagnostics Options Setup 
-local sign = function(opts)
-  vim.fn.sign_define(opts.name, {
-    texthl = opts.name,
-    text = opts.text,
-    numhl = ""
-  })
-end
-
-sign({name = "DiagnosticSignError", text = "x"})
-sign({name = "DiagnosticSignWarn", text = "!"})
-sign({name = "DiagnosticSignHint", text = ">"})
-sign({name = "DiagnosticSignInfo", text = ">"})
-
 vim.diagnostic.config({
     virtual_text = false,
-    signs = true,
+    signs = {
+        text = {
+            [vim.diagnostic.severity.ERROR] = "x",
+            [vim.diagnostic.severity.WARN] = "!",
+            [vim.diagnostic.severity.HINT] = ">",
+            [vim.diagnostic.severity.INFO] = ">",
+        },
+    },
     update_in_insert = true,
     underline = true,
     severity_sort = false,
@@ -99,4 +104,3 @@ cmp.setup({
       end,
   },
 })
-
